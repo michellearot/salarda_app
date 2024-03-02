@@ -1,0 +1,27 @@
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import DefaultPage from './DefaultPage';
+
+
+const Stack = createStackNavigator();
+
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen
+          name="Home"
+          component={DefaultPage}
+          options={{
+            headerShown: false,
+          }}
+        />
+    
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default App;
